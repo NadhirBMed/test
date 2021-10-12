@@ -27,16 +27,21 @@ public class CardGameApplication {
 
 		// create random hand
 		Hand hand = new Hand(10);
+		System.out.println("unsorted hand");
 		hand.showHand();
 
 		// sort hand with type
-		hand.sortWithType(typeOrder);		;
+		hand.sortWithType(typeOrder);
+		System.out.println("type order");
 		System.out.println(typeOrder.stream().map(Card::typeName).collect(Collectors.toList()).toString());
+		System.out.println("hand sorted with types");
 		hand.showHand();
 
 		// sort hand with order
 		hand.sortWithValue(valueOrder);
+		System.out.println("value order");
 		System.out.println(valueOrder.stream().map(Card::valueName).collect(Collectors.toList()).toString());
+		System.out.println("hand sorted with values");
 		hand.showHand();
 	}
 
